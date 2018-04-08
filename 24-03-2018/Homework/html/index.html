@@ -8,9 +8,14 @@
 <body>
     <article>
         <h1>Участници в състезанието:</h1>
-        <table>
+        <!-- В style.css има обяснение защо съм добавил клас -->
+        <table class="peopleCardWrapper">
             <tbody>
                 <tr>
+                    <!-- Лично аз бих ти препоръчал да имаш един общ елемент, който да обвива цялата визитка.
+                        Дали ще вкарай отделна таблица за всяка една визитка, или ще направиш комбинация от <div> и <span> няма значение.
+                        Предимството на това е, че получаваш самостуятелен елемент, който можеш да го преместиш извън горната таблица без да се счупи външния му вид.
+                        По-надолу съм направил еидин такъв вариант. -->
                     <th class="person-images">
                         <img src="images/Person placeholder.png"/>
                     </th>
@@ -55,6 +60,26 @@
                     </th>
                 </tr>
             </tbody>
+        </table>
+
+        <!-- Това е една напълно самостоятелна визитка, която можеш да я поставиш общо взето навсякъде. -->
+        <table width="400px" class="peopleCardWrapper">
+            <thead>
+                <tr class="person-info">
+                    <td>
+                        <img src="images/Person placeholder.png"/>
+                    </td>
+                    <th>
+                        <span>Иванка Тодорова</span>
+                        <br>
+                        <span>Години:</span><span class="info">21</span>
+                        <br>
+                        <span>Длъжност:</span><span class="info">Масажист</span>
+                        <br>
+                        <span>Телефон:</span><span class="info">258 369 147</span>
+                    </th>
+                </tr>
+            </thead>
         </table>
     </article>
 </body>
